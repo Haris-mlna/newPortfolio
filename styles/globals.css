@@ -1,0 +1,231 @@
+/*====================
+Typography
+====================*/
+
+/* Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Raleway */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Monsterrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*====================
+Typography Ends
+====================*/
+
+:root {
+  /* FONT */
+  --font-roboto: "Roboto", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+
+  --font-normal: var(--font-poppins);
+  --font-header: var(--font-montserrat);
+  --font-title: var(--font-raleway);
+
+  /* Color */
+  --color-background: #edf6f9;
+  --color-primary: #00bbf9;
+  --color-accent: #2541b2;
+  --color-gold: #f1a208;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: var(--font-normal);
+  background-color: #edf6f9;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  color: white;
+
+  padding: 1rem;
+  z-index: 10;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus {
+  all: unset;
+}
+
+/* ======================
+CLOUDS BACKGROUND
+====================== */
+
+#background-wrap {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+@keyframes animateCloud {
+  0% {
+    margin-left: -50%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+  -webkit-animation: animateCloud 35s linear infinite;
+  -moz-animation: animateCloud 35s linear infinite;
+  animation: animateCloud 35s linear infinite;
+
+  -webkit-transform: scale(0.65);
+  -moz-transform: scale(0.65);
+  transform: scale(0.65);
+}
+
+.x2 {
+  -webkit-animation: animateCloud 20s linear infinite;
+  -moz-animation: animateCloud 20s linear infinite;
+  animation: animateCloud 20s linear infinite;
+
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  transform: scale(0.3);
+}
+
+.x3 {
+  -webkit-animation: animateCloud 30s linear infinite;
+  -moz-animation: animateCloud 30s linear infinite;
+  animation: animateCloud 30s linear infinite;
+
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.x4 {
+  -webkit-animation: animateCloud 18s linear infinite;
+  -moz-animation: animateCloud 18s linear infinite;
+  animation: animateCloud 18s linear infinite;
+
+  -webkit-transform: scale(0.4);
+  -moz-transform: scale(0.4);
+  transform: scale(0.4);
+}
+
+.x5 {
+  -webkit-animation: animateCloud 25s linear infinite;
+  -moz-animation: animateCloud 25s linear infinite;
+  animation: animateCloud 25s linear infinite;
+
+  -webkit-transform: scale(0.55);
+  -moz-transform: scale(0.55);
+  transform: scale(0.55);
+}
+
+/* OBJECTS */
+
+.cloud {
+  background: #fff;
+  background: -moz-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(5%, #fff),
+    color-stop(100%, #f1f1f1)
+  );
+  background: -webkit-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+  background: -o-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+  background: -ms-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+  background: linear-gradient(top, #fff 5%, #f1f1f1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f1f1f1',GradientType=0 );
+
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+
+  -webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+
+  height: 120px;
+  position: relative;
+  width: 350px;
+}
+
+.cloud:after,
+.cloud:before {
+  background: #fff;
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.cloud:after {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+
+  height: 100px;
+  left: 50px;
+  top: -50px;
+  width: 100px;
+}
+
+.cloud:before {
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+
+  width: 180px;
+  height: 180px;
+  right: 50px;
+  top: -90px;
+}
+
+.cloud {
+  transform: scale(30%);
+}
+
+/* ======================
+CLOUDS BACKGROUND ENDS
+====================== */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #49a9d6;
+}
